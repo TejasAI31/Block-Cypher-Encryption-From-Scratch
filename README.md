@@ -12,14 +12,14 @@ This Project Contains The Following Symmetric Block Cyphers From Scratch In The 
 -AES256
 
 # Modes Of Encryption
-(Currently Only In AES)
--ECB (Electronic Code Book)
--CBC (Cipher Block Chaining)
--OFB (Output Feedback Mode)
+(Currently Only In AES)</br>
+-ECB (Electronic Code Book)</br>
+-CBC (Cipher Block Chaining)</br>
+-OFB (Output Feedback Mode)</br>
 
-Note:
-For this implementation, speed was not a concern as it is an educational deep dive into block cyphers.
-Every single function has been written by hand, showcasing all the operations that take place clearly.
+Note:</br>
+For this implementation, speed was not a concern as it is an educational deep dive into block cyphers.</br>
+Every single function has been written by hand, showcasing all the operations that take place clearly.</br>
 
-Stats:
+Stats:</br>
 5000 characters Read+Encryption+Decryption+Write= 2.5 Seconds (OFB Mode)
