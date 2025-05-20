@@ -126,7 +126,7 @@ void encryptDocument(string path,string key="",string mode="ECB",string IV = "")
 
 	//Encrypt Data
 	string encrypted = aes256.encrypt(text,key,IV);
-	ofstream encryptoutput("../out/encrypted.txt");
+	ofstream encryptoutput("../encrypted.txt");
 	if (!encryptoutput.is_open()) {
 		cerr << "Error writing the encryption!";
 		return;
@@ -139,7 +139,7 @@ void encryptDocument(string path,string key="",string mode="ECB",string IV = "")
 	cout << "Decrypting..." << endl;
 	//Decrypt Data
 	string decrypted = aes256.decrypt(encrypted, key,IV);
-	ofstream decryptoutput("../out/decrypted.txt",ios::binary);
+	ofstream decryptoutput("../decrypted.txt",ios::binary);
 	if (!decryptoutput.is_open()) {
 		cerr << "Error writing the decryption!";
 		return;
@@ -155,11 +155,11 @@ int main()
 {
 	//Any 32 letter key, 16 letter IV will work
 	
-	encryptDocument("../sample.txt");
+	//encryptDocument("../sample.txt");
 	//encryptDocument("../sample.txt","abcdefghijklmnopqrstuvwx12345678","ECB");
 	//encryptDocument("../sample.txt","abcdefghijklmnopqrstuvwx12345678","OFB");
 	//encryptDocument("../sample.txt","abcdefghijklmnopqrstuvwx12345678","CBC");
-	//encryptDocument("../sample.txt","abcdefghijklmnopqrstuvwx12345678","OFB","abcdefghijklmnop");
+	encryptDocument("../sample.txt","abcdefghijklmnopqrstuvwx12345678","OFB","abcdefghijklmnop");
 	//encryptDocument("../sample.txt","abcdefghijklmnopqrstuvwx12345678","CBC","abcdefghijklmnop");
 
 }
