@@ -3,7 +3,7 @@
 This Project Contains The Following Symmetric Block Cyphers From Scratch In The Following Variants:
 
 # DES
--Single DES\n
+-Single DES</br>
 -Triple DES
 
 # AES
